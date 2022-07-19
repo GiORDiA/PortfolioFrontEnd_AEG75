@@ -6,22 +6,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Web Full Stack AEG75</title>
 
+  <!-- Estilo de fuente: Monserrat Google Font regu400 medi500 bold700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Library Normalize Css visualización igual en todos los navegadores -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"> 
+
+  <link rel="stylesheet" href="css/main.css"> <!-- archivos Css básicos del Proyecto -->
+  <link rel="stylesheet" href="css/navbar.css"> <!-- Css barra de navegacion específico -->
+  <link rel="stylesheet" href="css/about.css"> <!--- style para about Acerca de -->
+  <script defer src="js/app.js"></script> <!-- archivos Js con diferimiento "defer" hasta que se ejecute el DOM completamente -->
 </head>
 
+<body id="page-top"> <!-- para el Scroll-->
 
-<body id="page-top"> <!-- para Scroll-->
+<!-- Mastheade Logo Redes Sociales y Login -->
+  <header class="topheader">
+    <nav class="topnav">
+      <div class="logo">
+        <img height="70" width="115" src="img/APLogo.png" alt="Argentina Programa #YoProgramo"> <!-- CAMBIO modificar archivo en ANGULAR -->
+        <img height="70" width="232" src="img/LogosInti.png" alt="Inti y Ministerio de Desarrollo Productivo Argentina"> <!-- CAMBIO Idem al anterior -->
+      </div>
+            
+      
+      <!-- Imagenes-iconos y enlaces redes sociales -->
+      <div class="redsocial">
+        <a href="#" class="social">
+          <img src="img/FacebookAa.png" alt="Facebook" id="Facebook">
+          <img src="img/InstagramAa.png" alt="Instagram" id="Instagram">
+          <img src="img/TwitterAa.png" alt="Twitter" id="twitter">
+          <img src="img/LinkedinAa.png" alt="Linkedin" id="Linkedin">
+          <img src="img/DiscordAa.png" alt="Discord" id="Discord">
+        </a> 
+      </div>
+      
+    </nav>
 
-<!-- Mastheade Logo Banner Redes Sociales y Login -->
+    <!-- Navigation -->
+    <nav class="menunav">
+      <button class="open-menu" aria-label ="Abrir menú">
+        <img src="img/menuopen.png" alt="abrir menú">
+      </button>
+      <ul class="menu">
+        <button class="close-menu" aria-label ="Cerrar menú">
+          <img src="img/close.png" alt="cerrar menú">
+        </button>
+        <li><a href="#about" class="selected">Acerca de</a></li> <!-- con clase selector para el puntero al pasar por arriba -->
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#education">Educación</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+<!-- Banner About FotoPerfil Section -->
+<section class="about">
+  <div class="about-img-section"> <!-- info profesional sobre mí + FOTOPerfil -->
+    <div class="banner-img-section">
+      <img class="banner-img" src="img/banner1.png" alt="Banner"> <!-- imagen del banner -->
+    </div> 
+
+    <div class="horizontal-padding vertical-padding">
+      <div class="about-info">
+        <div class="about-perfil-img">
+          <img class="about-img" src="img/fotperfilB.png" alt="Full Stack Developer Jr"> <!-- foto perfil -->
+          <h1 class="about-name">Giordano Ariel</h1>
+          <h2 class="about-specialty">Full Stack Developer Jr.</h2>
+          <p class="about-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui in.</p> <!-- Breve reseña profesional sobre mí-->
+          <button class="about-btn">
+          Download cv
+          </button>
+        </div>
+        <div class="acerca-de"> <!-- Información profesional -->
+          <h1 class="title-acerca-de">Acerca de</h1>
+          <p class="acerca-de-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</p>
+        </div>
+      </div>
+    </div>  
+  </div>
+</section>
 
 
-<!-- Navigation -->
+<!-- Banner About FotoPerfil Section -->
+<!--<section class="about">
+  <div class="banner-img-section">
+    <img class="banner-img" src="img/banner1.png" alt="Banner"> <!-- imagen del banner -->
+  <!--</div> 
+
+  <div class="about-img-section"> <!-- info profesional sobre mí + FOTOPerfil --> 
+    <!--<div class="about-info">
+      <img class="about-img" src="img/fotperfilB.png" alt="Full Stack Developer Jr"> <!-- foto perfil -->
+      <!--<h1 class="about-name">Giordano Ariel</h1>
+      <h2 class="about-specialty">Full Stack Developer Jr.</h2>
+      <p class="about-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui unde aliquid itaque laudantium beatae aperiam tempora adipisci vitae, blanditiis mollitia placeat maxime. Dolorem, officia quos reprehenderit atque error ad in.</p> <!-- Breve reseña profesional sobre mí-->
+      <!--<button class="about-btn">
+      Download cv
+      </button>
+    </div>
+    
+    <article class="acerca-de"> <!-- Información profesional -->
+      <!--<h1 class="title-acerca-de">Acerca de</h1>
+      <p class="acerca-de-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, hic tempora! Illum recusandae porro non! Magnam voluptatum ab repudiandae quisquam labore veritatis veniam quidem ullam cupiditate ratione. Commodi, enim cumque!</p>
+    </article>
+    
+  </div>
+</section>
 
 
-<!-- About FotoPerfil Name FullStackDevJr Section -->
+
+
 
 
 <!-- Experiencia Laboral Section -->
+
+
+<!-- Experiencie Section -->
 
 
 <!-- Education Section -->

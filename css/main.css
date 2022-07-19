@@ -1,0 +1,48 @@
+/* Raíz del Document nodo principal selector para definir variables para el cambio automático al citarla*/
+:root {
+  --theme-color-topheader: #00358e;
+  --theme-color: #0D0ACA;
+  --primary-color: black;
+  --secondary-color: #F7C331;
+  --tertiary-color: red;
+  --text-color-inverse: black;
+  --text-color: white;
+  --navbar-shallow-color: #e5e5e5; /* color sombra linea barra de navegación */
+  --menu-mobile-background-color: #3A4460; /* color background del menu dispositivo mobil */
+}
+
+/* link css para todo el body Google Font fuente Montserrat sino sans-serif del navegador */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--theme-color);
+  color: var(--text-color); /* color general del texto */
+  padding-top: 147px; /* para tener espacio en el top body al estar fijado el navbar (.topheader position fixed) barra de navegación */ 
+}
+
+/* reseteo global enlaces: */
+a {
+  text-decoration: none; /* enlaces sin lineas debajo */
+  color: var(--text-color); /* color del texto enlaces */
+}
+
+/* padding minimos que vamos a tener en dispositivos mobiles */
+.horizontal-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.vertical-padding {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* padding minimos en dispositivos desktop a partir de un min-width: 950px */
+@media (min-width: 950px) {
+  .horizontal-padding {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .vertical-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

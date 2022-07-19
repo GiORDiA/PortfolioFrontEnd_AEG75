@@ -1,0 +1,200 @@
+/* seleccionamos los diferentes elementos que tienen clases: */
+.topheader {
+  box-shadow: 0 4px 5px var(--navbar-shallow-color); /* linea sombra de la caja, correr el elemento del eje: X= 0, Y= 4px hacia abajo, que este difuminado, color */
+  position: fixed; /*posición fija del Header con respecto del viewport como barra completa no se oculta con el scroll */
+  background-color: var(--theme-color-topheader); /* fondo del contenedor Header con la variable */
+  left: 0; /* fijado con respecto a la izquierda */
+  top: 0; /* fijado con respecto arriba al tope */
+  width: 100%; /* fijo a todo el ancho */
+  z-index: 100; /* Al ser position fixed evito que el resto de los elementos pasen por encima en el viewport al hacer scroll z-index por defecto es 0 pero al elevarlo se logra evitarlo */
+}
+
+/* clases barra de navegacion */
+.topnav {
+  display: flex; /* los elementos se colocan al lado en bloque fila */
+  justify-content: space-between; /* espacio en el medio de los elementos separados en bloques en cada esquina */
+  padding: 0 10px;
+  max-width: 980px; /* ancho de pantalla máximo entre separación de los elementos */
+  margin: 0 auto;/* centrado de los elementos con respecto a su contenedor Header */
+}
+
+
+/* Logos */
+
+.logo {
+  display: flex; /* los elementos al lado en bloque fila */
+  align-items: center; /* los elementos centrados separados de los costados del contenedor */
+}
+
+
+/* Redes Sociales */
+
+.redsocial {
+  display: flex;
+  align-items: center; /* los elementos centrados separados de los costados del contenedor */
+  
+}
+
+.social {
+  
+}
+
+
+/* Menu */
+
+.menunav {
+  display: flex; /* los elementos al lado en bloque fila */
+  justify-content: center; /* los elementos en el centro separados de los costados del contenedor */
+  padding: 0 10px;
+  max-width: 980px; /* ancho de pantalla máximo entre separación de los elementos */
+  margin: 0 auto;/* centrado de los elementos con respecto a su contenedor Header */
+}
+
+.menu {
+  display: flex; /* los elementos al lado en bloque fila */
+  align-items: center; /* los elementos centrados separados de los costados del contenedor */
+  list-style: none; /* quitar los puntos por defectos las ul */
+  margin: 0; /* reseteamos por defecto lo añade el navegador hacia elemento li */
+  padding: 0; /* idem por reseteo */
+} 
+
+.menu li {
+  padding: 0 15px;
+}
+
+.menu a {
+  color: var(--text-color);
+  font-size: 18px; /* tamaño de fuente */
+  font-weight: 500; /* peso de la fuente */
+  line-height: 70px; /* altura de la fila */
+  text-transform: uppercase; /* para que este en mayúscula */
+  position: relative; /* para posicionar el pseudo selector con respecto a esta clase enlace y no al body */
+}
+
+/*  Para dar style: que aparezcan lineas debajo de cada elemento en menu al pasar el puntero por ej con (Pseudo selector after y before con ::puntos para diferenciarlos del resto de selectores, va antes (before) o despues(after) del elemento clase, dibujamos un rectangulo invisible al rededor del elemento seleccionado) */
+.menu a::after {
+  content: ""; /* siempre agregamos un contenido al elemento ej. que este vacio "" o con aa para ir viendo el desarrollo de las modificaciones o un text o url de imag, etc */
+  background-color: var(--secondary-color); /* color para la lineas de los elementos menu */
+  position: absolute; /* posiciona color en el primer elemento padre. */
+  left: 0; /* que este el color dentro del elemento desde la izquierda (pero modificar position: relative desde la clase misma .menu a)*/
+  top: calc(100% + 4px); /* para que este por debajo del elemento del enlace; y para separar la linea del elemento; usamos la función calculo y le agrego los píxeles necesarios */
+  width: 100%; /* que abarque todo el ancho del elemento */
+  height: 4px; /* y que tenga un alto en px, es lo que va abarcar como una linea el rectangulo */
+
+  opacity: 0; /* que no se vea hasta pasar el puntero del mouse por arriba con la clase selected del enlace .menu a.selected::after */
+  transition: opacity 0.3s;/* transición para que aparezca o desaparezca la linea por debajo del elemento en segundos de retardo */
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8; /* con selected + hover para que se vea al seleccionar pasar el puntero del mouse por arriba de cada elemento y con cierto nivel de transpariencia */ 
+}
+
+.menu a:hover {
+  color: var(--primary-color); /* al selecionar con el puntero del mouse por arriba cambia el color del elemento selecionado al realizar el hover */
+}
+
+
+/* iconos de menu */
+.open-menu,
+.close-menu {
+  display: none; /* que icono abrir y cerrar menu en desktop no se vean */
+}
+
+
+/* ========================RESPONSIVE===============================*/
+
+/* Style: para dispositivos mobil con @media que se aplique desde 0 hasta 950 píxeles */
+
+@media (max-width: 950px) {
+  /* Logos */
+
+  .logo {
+    flex-direction: column; /* menu en columna */
+    align-items: center; /* los elementos centrados separados de los costados del contenedor */
+  }
+
+
+/* Redes Sociales */
+
+  .redsocial {
+  
+  }
+
+  .social {
+    align-items: center; /* los elementos centrados separados de los costados del contenedor */
+  }
+
+
+/* Menu */
+
+  .menu {
+    flex-direction: column; /* menu en columna */
+    position: fixed; /*posición fija del Header con respecto del viewport como barra completa no se oculta con el scroll */
+    left: 0; /* fijado con respecto a la izquierda */
+    top: 0; /* fijado con respecto arriba al tope */
+    width: 100%; /* fijo a todo el ancho */
+    align-items: center; /* los elementos centrados porque estan en columnas pero separados de los costados del contenedor */
+    background-color: var(--menu-mobile-background-color);
+    height: 100%; /* que abarque todo el alto de la pantalla */
+    overflow-y: auto; /* que ponga una barra automática al costado cuando el contenido este apretado con el scroll se salga del viewport */
+
+    opacity: 0.5; /* para alinear con el menu open y no ver el menu close va de 0 a 1 la visibilidad para centrar los menu */
+    pointer-events: none; /* para que cuando el menu este cerrado y no tenga punteros los elementos ocultos */
+    transition: opacity 0.4s; /* transiciona la opacidad con una velocidad en segundos dada */
+  } 
+
+  .menu li {
+    padding: 0;
+  }
+
+  .menu a {
+    color: var(--text-color-inverse); /* invierto el color primario */
+    line-height: 70px; /* altura de la fila */
+    font-size: 25px; /* tamaño text en el menu abierto */
+  }
+
+
+/* iconos de menu */
+  .open-menu,
+  .close-menu {
+    display: block; /* que icono abrir y cerrar de menu en mobil, se vean */
+    border: none; /* eliminamos los style de bordes */
+    background: none; /* eliminamos el style de fondo */
+    cursor: pointer; /* colocamos un señalador puntero al pasar por arriba */
+  }
+
+  /* .open-menu {
+    align-self: flex-start;
+  } */
+
+  .close-menu {
+    align-self: flex-end; /* alinear un elemento diferente del resto, en este caso al final */
+    /* padding: 20px 15px;  centrar con open-menu */
+  }
+/* clase menu con un _modificador para cuando este abierto */
+  .menu_opened {
+    opacity: 1; /* la opacidad aparece */
+    pointer-events: all; /* añade nuevamente todos los eventos del puntero para scroll */
+  }
+
+  /* Eliminamos focusbordes de iconos open y close menu para el puntero, que quede focusborde en tecla tab */
+  .open-menu:focus:not(:focus-visible),
+  .close-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+
+
+  /*  Para que en dipositivos mobil NO aparezca lineas por debajo de cada elemento en menu al pasar el puntero seleccionado) */
+  .menu a::after {
+    content: none; /* que no tenga un contenido en dispositivos mobil */
+  }
+
+  /* al realizar el hover o seleccionamos el elemento */
+  .menu a:hover,
+  .menu a.selected {
+  color: var(--secondary-color); /* al selecionar con el puntero del mouse por arriba cambia al color secundario el elemento */
+  }
+  
+}
