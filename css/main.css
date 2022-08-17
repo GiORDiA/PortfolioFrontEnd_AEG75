@@ -1,22 +1,71 @@
-/* Raíz del Document nodo principal selector para definir variables para el cambio automático al citarla*/
+/* :::::Para Dispositivos MOBILES:::: */
+/* Raíz del Document, nodo principal selector para definir variables para el cambio automático al citarla en cualquier lugar. */
 :root {
   --theme-color-topheader: #00358e;
   --theme-color: #0D0ACA;
-  --primary-color: black;
+  --primary-color: white;
   --secondary-color: #F7C331;
-  --tertiary-color: red;
-  --text-color-inverse: black;
-  --text-color: white;
-  --navbar-shallow-color: #e5e5e5; /* color sombra linea barra de navegación */
+  --tertiary-color: rgb(255, 0, 0);
+  --text-color-inverse: white;;
+  --text-color: black;
+  --navbar-shallow-color: #0215fd; /* color sombra linea barra de navegación */
   --menu-mobile-background-color: #3A4460; /* color background del menu dispositivo mobil */
+  --bd-violet-rgb: 112.520718,44.062154,249.437846;
+  --bd-purple: #4c0bce;
+  --bd-violet: #712cf9;
+  --bd-accent: #ffe484;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-cornflowerblue:#6495ed;
+}
+
+html {
+  scroll-behavior: smooth; /* para lograr que el comportamiento de desplazamiento-scroll sea suave */
+}
+
+img[id] {
+  scroll-margin-top: 150px; /* para lograr al hacer scroll que quede visible la sección elejida y no por debajo del menu de navegación - barra de navegacion que es fija */
 }
 
 /* link css para todo el body Google Font fuente Montserrat sino sans-serif del navegador */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--theme-color);
+  background-color:  var(--bs-gray-400);/*hsl(0deg 0% 100%); /*#e5e5e5;/*#0215fd; /*#06ccff; */
   color: var(--text-color); /* color general del texto */
-  padding-top: 147px; /* para tener espacio en el top body al estar fijado el navbar (.topheader position fixed) barra de navegación */ 
+  padding-top: 140px; /* para tener espacio en el top body al estar fijado el navbar (.topheader position fixed) barra de navegación */
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+  /*background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95)); */
+  
 }
 
 /* reseteo global enlaces: */
@@ -27,22 +76,96 @@ a {
 
 /* padding minimos que vamos a tener en dispositivos mobiles */
 .horizontal-padding {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 25px; /* izquierda*/
+  padding-right: 25px; /* derecha*/
 }
 .vertical-padding {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 25px; /* parte superior */
+  padding-bottom: 25px; /* abajo */
 }
 
-/* padding minimos en dispositivos desktop a partir de un min-width: 950px */
+/* imagen ola utilizada para separación de section */
+.wave {
+  width: 100%; /* para que este integrada al 100% del ancho de la pagina viewport */
+  position: relative; /* al ampliar la pantalla añade una linea que lo borramos integrandolo al elemento */
+}
+
+.wave_top {
+  transform: scaleY(-1); /* invierte horizontalmente la posición de la imagen ola para integrarla a la section */
+  top: 2px; /* que se mueva en su posición natural 2px y se integre */
+  padding-top: 0px; /* parte superior */
+}
+
+.wave_bottom {
+  top: -2px; /* que se mueva en su posición natural 2px y se integre */
+  padding-bottom: 0px; /* abajo */
+}
+
+.img-central-section {
+  display: flex;
+  width: 60%;  /* foto de perfil que sea el 60% de mi viewport */
+  max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-bottom: -10px;
+  transform: translateY(40px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: 0.8s;
+  border-radius: 5%;
+  cursor: pointer none;
+  background-color: #0066ff;
+  border: 1px solid var(--navbar-shallow-color);
+}
+
+.img-central-section:hover {
+  transform: translateY(-20px);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  cursor: pointer none;
+  transition: 0.8s all;
+  border-radius: 5%;
+
+}
+
+/* ------------------------------------------------------------------*/
+
+/* padding minimos:::::Para Dispositivos DESKTOP::::a partir de un min-width: 950px */
 @media (min-width: 950px) {
+
+  img[id] {
+    scroll-margin-top: -450px; /* para lograr al hacer scroll que quede visible la sección elejida y no por debajo del menu de navegación - barra de navegacion que es fija */
+  }
+
   .horizontal-padding {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px; /* izquierda */
+    padding-right: 25px; /* derecha */
   }
   .vertical-padding {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 50px; /* parte superior */
+    padding-bottom: 50px; /* abajo */
+  }
+
+  .img-central-section {
+  width: 80%;  /* foto de perfil que sea el 75% de mi viewport */
+  max-width: 400px; /* que la imagen no se amplie más alla de los 400 pixeles */
+  /*border-radius: 50%;*/
+  padding: 0 0;
+  margin-top: -70px;
+  margin-bottom: -20px;
+  transform: translateY(40px);
+  background-color: #0066ff;
+  border: 1px solid var(--navbar-shallow-color);
+  }
+
+  .img-central-section:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+  cursor: pointer none;
+  transition: 1s;
+  border-radius: 5%;
+  animation-name: mover;
+  animation-iteration-count: infinite;
   }
 }
