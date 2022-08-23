@@ -112,7 +112,6 @@
   /*margin-top: -100px;*/ 
 }
 
-
 /* circle */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
@@ -156,8 +155,8 @@
 }
 
 .card:hover .percent .number h2{
-    color: rgb(249, 251, 251);
-    font-size: 53px;
+  color: rgb(249, 251, 251);
+  font-size: 53px;
 }
 
 .container .card .percent svg {
@@ -334,7 +333,6 @@
   max-height: 40%;
   border-radius: 5%;
 }
-
 
 /* _______________________________________________________________________*/
 

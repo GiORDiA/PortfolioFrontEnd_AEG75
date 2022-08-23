@@ -147,12 +147,11 @@
   border-radius: 5%;
 }
 
-
 .education-certification {
   font-size: 25px;
   font-weight: bold;
   color: var(--secondary-color);
-  }
+}
 
 .education-institution {
   font-size: 1em;
@@ -180,9 +179,6 @@
 
 /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
-  body {
-    
-  }
 
   .educations-title {
     font-size: 50px;
@@ -203,7 +199,7 @@
   margin-bottom: -10px;
   }
 
-/* Div logo */
+  /* Div logo */
   .education-logo-img {
     display: flex;
     justify-content: space-evenly;
@@ -232,8 +228,7 @@
   border: 2px solid #050505;
   }
 
-
-/* Imagen institución */
+  /* Imagen institución */
   .education-img-ministerio {
     width: 75%;  /* foto de perfil que sea el 75% de mi viewport */
     max-width: 350px; /* que la imagen no se amplie más alla de los 350 pixeles */
@@ -304,8 +299,6 @@
     border: 0.25px solid #06ccff;
   }
 
-
-
   .education-institution {
     font-size: 25px;
   }
@@ -313,12 +306,10 @@
   .education-date {
     font-weight: bold;
     font-size: 20px;
-    margin-top: 20px;
   }
 
   .education-description {
     font-size: 20px;
-    margin-top: 10px;
     line-height: 1.3;
   }
 
@@ -331,7 +322,6 @@
     transform: translateY(none);
     transform: scale(none);
     box-shadow: none;
-    cursor: pointer none;
     transition: none;
     border-radius: none;
   }

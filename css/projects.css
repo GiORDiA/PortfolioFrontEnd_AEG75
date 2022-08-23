@@ -80,9 +80,6 @@
 
 /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
-  body {
-    
-  }
 
   .projects-title {
     font-size: 50px;
@@ -102,7 +99,6 @@
   margin-top: -50px;
   margin-bottom: -10px;
   }
-
 
   .projects-grid {
     display: grid;

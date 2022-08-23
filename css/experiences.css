@@ -119,9 +119,6 @@
 
 /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
-  body {
-    
-  }
 
   .experiences-title {
     font-size: 50px;
@@ -163,9 +160,6 @@
   }
 
   .experience {
-    padding: 25px; /* añadimos espacios */
-    max-width: 500px; /* para que el texto al ampliar el viewport no se amplie a lo ancho le pongo un máximo de 6 -7 palabras. */
-    margin: 0 auto; /* el contenido queda centrado modo tipo tablet-intermedio. */
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(28, 27, 27, 0.5);
     border-radius: 42px; /* redondeo los bordes-puntas del botón */
@@ -175,11 +169,8 @@
   }
 
   .experience:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
-    cursor: pointer none;
-    border-radius: 42px; /* redondeo los bordes-puntas del botón */
-    transition: 0.8s all;
     background-color: #0066FF;
     border: 1px solid #06ccff;
   }
@@ -200,12 +191,10 @@
   .experience-position {
     font-weight: bold;
     font-size: 20px;
-    margin-top: 20px;
   }
 
   .experience-description {
     font-size: 20px;
-    margin-top: 10px;
     line-height: 1.3;
   }
 

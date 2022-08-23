@@ -108,7 +108,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: -50px;
+  margin-top: -25px;
   margin-bottom: -10px;
   transform: translateY(40px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
@@ -138,10 +138,6 @@ a {
     scroll-margin-top: -450px; /* para lograr al hacer scroll que quede visible la sección elejida y no por debajo del menu de navegación - barra de navegacion que es fija */
   }
 
-  .horizontal-padding {
-    padding-left: 25px; /* izquierda */
-    padding-right: 25px; /* derecha */
-  }
   .vertical-padding {
     padding-top: 50px; /* parte superior */
     padding-bottom: 50px; /* abajo */
@@ -152,20 +148,16 @@ a {
   max-width: 400px; /* que la imagen no se amplie más alla de los 400 pixeles */
   /*border-radius: 50%;*/
   padding: 0 0;
-  margin-top: -70px;
+  margin-top: -30px;
   margin-bottom: -20px;
-  transform: translateY(40px);
-  background-color: #0066ff;
-  border: 1px solid var(--navbar-shallow-color);
+  transform: translateY(60px);
   }
 
   .img-central-section:hover {
-  transform: translateY(-20px);
+  transform: translateY(-25px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
-  cursor: pointer none;
   transition: 1s;
-  border-radius: 5%;
-  animation-name: mover;
+  animation-name: move;
   animation-iteration-count: infinite;
   }
 }

@@ -78,16 +78,15 @@
 }
 
 /* _______________________________________________________________________*/
-
 /* ==========================RESPONSIVE=============================*/
 
 /* Style:  :::::Para Dispositivos DESKTOP::::  que se aplicaran en dispositivos como mínimo 950px en adelante con @media (aplicar desde 950 píxeles en adelante) */
 @media (min-width: 950px) {
 
   .pie-pagina .grupo-1 {
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  padding: 45px 0px;
-}
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+  }
 }

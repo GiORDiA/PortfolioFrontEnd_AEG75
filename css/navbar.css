@@ -1,6 +1,6 @@
-/* :::::Para Dispositivos DESKTOP:::: */
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
+/* :::::Para Dispositivos DESKTOP:::: */
 /* seleccionamos los diferentes elementos que tienen clases: */
 .topheader {
   box-shadow: 0 4px 5px var(--navbar-shallow-color); /* linea sombra de la caja, correr el elemento del eje: X= 0, Y= 4px hacia abajo, que este difuminado, color */
@@ -186,29 +186,15 @@
 
 @media (max-width: 950px) {
   .topheader {
-    box-shadow: 0 4px 5px var(--navbar-shallow-color); /* linea sombra de la caja, correr el elemento del eje: X= 0, Y= 4px hacia abajo, que este difuminado, color */
     position: none; /*posición fija del Header con respecto del viewport como barra completa no se oculta con el scroll */
-    background-color: var(--theme-color-topheader); /* fondo del contenedor Header con la variable */
-    left: 0; /* fijado con respecto a la izquierda */
-    top: 0; /* fijado con respecto arriba al tope */
-    width: 100%; /* fijo a todo el ancho */
-    z-index: 100; /* Al ser position fixed barra superior evito que el resto de los elementos pasen por encima en el viewport al hacer scroll con z-index, por defecto es 0 pero al elevar su valor se logra evitarlo por detras */
   }
 
-  /* clases barra de navegacion */
-  .topnav {
-    box-shadow: none;
-  }
-  
   /* Logos */
-
   .logo {
-    display: flex;
     flex-direction: row; /* menu en columna */
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center; /* los elementos centrados separados de los costados del contenedor */
   }
 
   .logo-inti {
@@ -216,13 +202,7 @@
     max-width: 174px;
   }
 
-
-/* Redes Sociales */
-
-  .redsocial-login {
-  
-  }
-
+ /* Check Día & Noche */ 
   .container.py-2 {
     padding: 0 6px;
   }
@@ -234,12 +214,10 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-
   }
 
 
-/* Menu */
-
+  /* Menu */
   .menu {
     display: flex; /* los elementos al lado en bloque fila */
     flex-direction: column; /* menu en columna */
@@ -247,23 +225,16 @@
     left: 0; /* fijado con respecto a la izquierda */
     top: 0; /* fijado con respecto arriba al tope */
     width: 100%; /* fijo a todo el ancho */
-    align-items: center; /* los elementos centrados porque estan en columnas pero separados de los costados del contenedor */
     background-color: var(--menu-mobile-background-color);
     height: 100%; /* que abarque todo el alto de la pantalla */
     overflow-y: auto; /* que ponga una barra automática al costado cuando el contenido este apretado con el scroll se salga del viewport */
-
     opacity: 0; /* para alinear con el menu open y no ver el menu close va de 0 a 1 la visibilidad para centrar los menu */
     pointer-events: none; /* para que cuando el menu este cerrado y no tenga punteros los elementos ocultos */
     transition: opacity 0.4s; /* transiciona la opacidad con una velocidad en segundos dada */
-  } 
-
-  .menu li {
-    padding: 0;
   }
 
   .menu a {
     color: var(--text-color-inverse); /* invierto el color primario */
-    line-height: 70px; /* altura de la fila */
     font-size: 25px; /* tamaño text en el menu abierto */
   }
 
@@ -285,7 +256,8 @@
     align-self: flex-end; /* alinear un elemento diferente del resto, en este caso al final */
     /* padding: 20px 15px;  centrar con open-menu */
   }
-/* clase menu con un _modificador para cuando este abierto */
+
+  /* clase menu con un _modificador para cuando este abierto */
   .menu_opened {
     opacity: 1; /* la opacidad aparece */
     pointer-events: all; /* añade nuevamente todos los eventos del puntero para scroll */
@@ -296,8 +268,6 @@
   .close-menu:focus:not(:focus-visible) {
     outline: none;
   }
-
-
 
   /*  Para que en dipositivos mobil NO aparezca lineas por debajo de cada elemento en menu al pasar el puntero seleccionado) */
   /*.menu a::after {
