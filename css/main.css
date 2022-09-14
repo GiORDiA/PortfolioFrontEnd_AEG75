@@ -2,7 +2,7 @@
 /* Raíz del Document, nodo principal selector para definir variables para el cambio automático al citarla en cualquier lugar. */
 :root {
   --theme-color-topheader: #00358e;
-  --theme-color: #0D0ACA;
+  --theme-color: #0d0aca;
   --primary-color: white;
   --secondary-color: #F7C331;
   --tertiary-color: rgb(255, 0, 0);
@@ -10,6 +10,7 @@
   --text-color: black;
   --navbar-shallow-color: #0215fd; /* color sombra linea barra de navegación */
   --menu-mobile-background-color: #3A4460; /* color background del menu dispositivo mobil */
+  --button-hover-color: hsl(0, 0%, 0%, 0.3);
   --bd-violet-rgb: 112.520718,44.062154,249.437846;
   --bd-purple: #4c0bce;
   --bd-violet: #712cf9;
@@ -48,7 +49,7 @@
   --bs-cornflowerblue:#6495ed;
 }
 
-html {
+.html {
   scroll-behavior: smooth; /* para lograr que el comportamiento de desplazamiento-scroll sea suave */
 }
 
@@ -57,7 +58,8 @@ img[id] {
 }
 
 /* link css para todo el body Google Font fuente Montserrat sino sans-serif del navegador */
-body {
+
+.body {
   font-family: 'Montserrat', sans-serif;
   background-color:  var(--bs-gray-400);/*hsl(0deg 0% 100%); /*#e5e5e5;/*#0215fd; /*#06ccff; */
   color: var(--text-color); /* color general del texto */

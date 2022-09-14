@@ -54,7 +54,6 @@
   align-content: center;
   justify-content: center;
   align-items: center; /* los elementos centrados separados de los costados del contenedor */
-  
 }
 
 /* Botón Login */
@@ -63,12 +62,32 @@
   padding: 0 6px;
 }
 
-.btn.btn-primary {
-  background: #013b9f;
+.btn-primary {
   padding: 3px 10px;
   box-shadow: 0 2px 4px var(--theme-color);
   border-radius: 10px;
-  border: 2px solid var(--bd-purple);
+  border: none;
+  border-color: var(--bs-blue);
+  background: linear-gradient(to right, var(--bs-cyan), var(--theme-color));
+  color: var(--bs-light);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  background-color: var(--button-hover-color);
 }
 
 /* Menu */
